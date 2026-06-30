@@ -8,7 +8,7 @@ function main() {
 
     printf "===== Getting authorized keys for $TARGET_USER =====\n" 1>&2
 
-    AUTHORIZED_KEY="cert-authority $(cat /ca/id_ed25519.pub)"
+    AUTHORIZED_KEY="cert-authority,principals=\"$TARGET_USER\" $(cat /ca/id_ed25519.pub)"
     echo ${AUTHORIZED_KEY}
 
     printf "===== Got authorized keys for $TARGET_USER: $AUTHORIZED_KEY =====\n" 1>&2

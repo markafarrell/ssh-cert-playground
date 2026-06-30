@@ -6,7 +6,7 @@ function main() {
 
     printf "🚀 ===== Generating signed ssh key ===== 🚀\n"
 
-    TARGET_USER=${1:-test1}
+    TARGET_USER=${1:-""}
 
     mkdir -p ~/.ssh
 
