@@ -6,6 +6,7 @@ function main() {
 
     source ${SCRIPT_DIR}/scripts/stop-server.sh
     source ${SCRIPT_DIR}/scripts/stop-client.sh
+    source ${SCRIPT_DIR}/scripts/stop-openbao.sh
 
     rm -rf ${SCRIPT_DIR}/ca/id_ed25519*
 }

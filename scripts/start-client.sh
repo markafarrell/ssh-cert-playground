@@ -10,7 +10,14 @@ function main() {
 
     source ${SCRIPT_DIR}/../hack/build-client.sh
 
-    docker run --rm -dt --hostname=client -v ${SCRIPT_DIR}/../ca:/ca --network ssh-cert-playground --name ssh-cert-playground-client ssh-cert-playground/client
+    docker run --rm -dt \
+        --hostname=client \
+        -v ${SCRIPT_DIR}/../ca:/ca \
+        -e BAO_ADDR="http://openbao:8200" \
+        -e BAO_TOKEN="openbao" \
+        --network ssh-cert-playground \
+        --name ssh-cert-playground-client \
+        ssh-cert-playground/client
 }
 
 main "$@"
