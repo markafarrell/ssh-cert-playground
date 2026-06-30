@@ -7,6 +7,7 @@ function main() {
     source ${SCRIPT_DIR}/scripts/generate-ca.sh
     source ${SCRIPT_DIR}/scripts/start-server.sh
     source ${SCRIPT_DIR}/scripts/start-client.sh
+    source ${SCRIPT_DIR}/scripts/start-openbao.sh
 }
 
 main "$@"
